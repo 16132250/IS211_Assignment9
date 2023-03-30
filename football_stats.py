@@ -14,6 +14,7 @@ if __name__ == "__main__":
     soup = BeautifulSoup(page, 'html.parser')
 
     table = soup.find("table", class_="TableBase-table")
+    # works table = soup.find("table", class_="TableBase-table")
     pretty_table = table.prettify()
 
     # print(pretty_table)
@@ -24,8 +25,8 @@ if __name__ == "__main__":
         if cells:
             player_name = cells[0].get_text()
             stats = [cell.get_text() for cell in cells[1:]]
-            # print(player_name, stats)
-            print(player_name)
+            print(player_name, stats)
+            # print(player_name)
     # print(soup)
     # print(soup.prettify())
 

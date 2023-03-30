@@ -20,7 +20,6 @@ if __name__ == "__main__":
 
     pt = PrettyTable(['Service Name', 'Service Launch Date', 'Subscription Totals'])
 
-    # Loop through each row and print the text content of each cell
     for row in rows:
         cells = row.find_all('td')
         if len(cells) >= 3:
